@@ -1,0 +1,11 @@
+
+### NODE.JS ###
+node_modules*
+npm-debug.log
+
+### OSX ###
+*.DS_Store
+._*
+
+### others ###
+.vscode
