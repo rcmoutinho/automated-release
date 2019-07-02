@@ -7,5 +7,17 @@ npm-debug.log
 *.DS_Store
 ._*
 
+### Eclipse ###
+.settings/
+.project
+.classpath
+build
+bin
+
+### IDEA ###
+.idea/*
+*.iml
+out
+
 ### others ###
 .vscode
