@@ -1,0 +1,33 @@
+dist: trusty
+sudo: required
+
+language: node_js
+node_js:
+  - "8"
+
+os:
+  - linux
+
+env:
+  global:
+    secure: lsji+hjmfAgExkDy0XPi3FVTNVcGUQbsN3UoWPqrm26PvSzeCcz/cqBthSa4ZKQDlqb3vw6NEVCdJL5XxdHQKwYMqc+ODKe36RKWSEslcg1N5lcCMy4O0ulFzN6HO8v3LCT5XllUXU5xWhnA9TB/R8ihbLIHLZuMV5zLrK63fIpMDgXJYd9oWvi1NtPXINr2HglseFuNYSRuxuij/LiJy/2YDQzal1AYKIjTUv/X1l7LZmQly49jPm9eIgX7Vu6f/8cwDd7SszHw2QllYcJ9N+RS829SwaH4apYeTyhA6rtZER/BZ73qtyRCjTxlZNwiDHsYxVw0k3bPlrSY34BYWYMHBLEMIkoHIORWF5bR+96vaW+hSNS3Rwzi/kHqyp/VD7wX0r65wO9G96NZB3eXzpV8KohfiVscP1JUnkP7azdObJWpwJhAtDkXGZ+bX+ACTFvA5tGPe6+IMqLL1iB6WZqwLhrIEgU7zn/X6xhhfKKN8jJLB4IXOrTnMoYYr5q1Hkkafr+x51ILp8dJbNcgXd3e0gNYI3++J3+In8V54hDAZLKaqmkwWIDcsFE2Fa+iz+DxCV/DbxR8uBKH4EWMcX3A+MuHh+7vN7zBNXMI51YeCUVMnHO0iW6ebksWv0TLJxtsp6K5QdmGhEKhUQfdOhgF6KMThHGn3joRvR636WM=
+
+install:
+  - npm install
+
+deploy:
+  provider: script
+  api_key: $GITHUB_TOKEN
+  node_js: lts/*
+  skip_cleanup: true
+  script:
+    - npx semantic-release
+  on:
+    branch: master
+
+notifications:
+  email:
+    recipients:
+      - rcmoutinho@cyborgdeveloper.tech
+    on_success: change # default: change
+    on_failure: always # default: always
