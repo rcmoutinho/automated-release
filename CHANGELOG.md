@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/rcmoutinho/automated-release/compare/v1.0.0...v1.1.0) (2019-07-10)
+
+
+### Features
+
+* 🎸 amazing good looking book ([ec97fc7](https://github.com/rcmoutinho/automated-release/commit/ec97fc7))
+
 # 1.0.0 (2019-07-10)
 
 
