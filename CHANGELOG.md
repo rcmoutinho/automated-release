@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/rcmoutinho/automated-release/compare/v1.1.0...v1.1.1) (2019-07-10)
+
+
+### Bug Fixes
+
+* 🐛 remove version from package.json ([549c090](https://github.com/rcmoutinho/automated-release/commit/549c090))
+
 # [1.1.0](https://github.com/rcmoutinho/automated-release/compare/v1.0.0...v1.1.0) (2019-07-10)
 
 
