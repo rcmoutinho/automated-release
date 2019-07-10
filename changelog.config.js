@@ -36,7 +36,7 @@ module.exports = {
         },
         "docs": {
             "description": "Documentation only changes",
-            "emoji": "📝",
+            "emoji": "📓",
             "value": "docs"
         },
         "feat": {
