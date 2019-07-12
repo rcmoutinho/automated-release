@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/rcmoutinho/automated-release/compare/v1.1.1...v1.2.0) (2019-07-12)
+
+
+### Features
+
+* 🎸 travis test part 1 ([304d0d0](https://github.com/rcmoutinho/automated-release/commit/304d0d0))
+* 🎸 travis test part 2 ([022ec46](https://github.com/rcmoutinho/automated-release/commit/022ec46))
+
 ## [1.1.1](https://github.com/rcmoutinho/automated-release/compare/v1.1.0...v1.1.1) (2019-07-10)
 
 
