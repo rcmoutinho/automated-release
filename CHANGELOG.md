@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/rcmoutinho/automated-release/compare/v1.2.0...v1.3.0) (2019-07-12)
+
+
+### Features
+
+* 🎸 test to trigger a release after a merge ([265ca0b](https://github.com/rcmoutinho/automated-release/commit/265ca0b))
+
 # [1.2.0](https://github.com/rcmoutinho/automated-release/compare/v1.1.1...v1.2.0) (2019-07-12)
 
 
