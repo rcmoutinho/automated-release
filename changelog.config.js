@@ -24,7 +24,7 @@ module.exports = {
     ],
     "scopes": [
         "",
-        "README",
+        "readme",
         "core"
     ],
     "types": {
