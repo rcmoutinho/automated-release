@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/rcmoutinho/automated-release/compare/v1.4.0...v1.5.0) (2019-07-24)
+
+
+### Features
+
+* **readme:** 🎸 new badges ([ef6158f](https://github.com/rcmoutinho/automated-release/commit/ef6158f))
+
 # [1.4.0](https://github.com/rcmoutinho/automated-release/compare/v1.3.0...v1.4.0) (2019-07-24)
 
 
