@@ -15,6 +15,9 @@ env:
 install:
   - npm install
 
+script:
+  - echo "default npm test ignored"
+
 deploy:
   provider: script
   api_key: $GITHUB_TOKEN
