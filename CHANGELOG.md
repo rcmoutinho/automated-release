@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/rcmoutinho/automated-release/compare/v1.3.0...v1.4.0) (2019-07-24)
+
+
+### Bug Fixes
+
+* **core:** 🐛 scope config must be lowercase ([28a6257](https://github.com/rcmoutinho/automated-release/commit/28a6257))
+
+
+### Features
+
+* **core:** 🎸 new scope configurations ([0d124f4](https://github.com/rcmoutinho/automated-release/commit/0d124f4))
+
 # [1.3.0](https://github.com/rcmoutinho/automated-release/compare/v1.2.0...v1.3.0) (2019-07-12)
 
 
