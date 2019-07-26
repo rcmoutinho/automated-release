@@ -1,3 +1,16 @@
+# [1.6.0](https://github.com/rcmoutinho/automated-release/compare/v1.5.0...v1.6.0) (2019-07-26)
+
+
+### Bug Fixes
+
+* **core:** 🐛 travis lint suggestion ([ce4466a](https://github.com/rcmoutinho/automated-release/commit/ce4466a))
+* **readme:** 🐛 add compose command on travis explanation ([74dc49e](https://github.com/rcmoutinho/automated-release/commit/74dc49e))
+
+
+### Features
+
+* **core:** 🎸 travis-cli docker support ([a4ec5c4](https://github.com/rcmoutinho/automated-release/commit/a4ec5c4))
+
 # [1.5.0](https://github.com/rcmoutinho/automated-release/compare/v1.4.0...v1.5.0) (2019-07-24)
 
 
