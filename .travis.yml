@@ -23,8 +23,7 @@ deploy:
   api_key: $GITHUB_TOKEN
   node_js: lts/*
   skip_cleanup: true
-  script:
-    - npx semantic-release
+  script: npx semantic-release
   on:
     branch: master
 
