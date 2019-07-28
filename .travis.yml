@@ -1,35 +1,64 @@
-dist: trusty
+language: ruby
 sudo: required
-
-language: node_js
-node_js:
-  - "8"
-
-os:
-  - linux
 
 env:
   global:
     secure: lsji+hjmfAgExkDy0XPi3FVTNVcGUQbsN3UoWPqrm26PvSzeCcz/cqBthSa4ZKQDlqb3vw6NEVCdJL5XxdHQKwYMqc+ODKe36RKWSEslcg1N5lcCMy4O0ulFzN6HO8v3LCT5XllUXU5xWhnA9TB/R8ihbLIHLZuMV5zLrK63fIpMDgXJYd9oWvi1NtPXINr2HglseFuNYSRuxuij/LiJy/2YDQzal1AYKIjTUv/X1l7LZmQly49jPm9eIgX7Vu6f/8cwDd7SszHw2QllYcJ9N+RS829SwaH4apYeTyhA6rtZER/BZ73qtyRCjTxlZNwiDHsYxVw0k3bPlrSY34BYWYMHBLEMIkoHIORWF5bR+96vaW+hSNS3Rwzi/kHqyp/VD7wX0r65wO9G96NZB3eXzpV8KohfiVscP1JUnkP7azdObJWpwJhAtDkXGZ+bX+ACTFvA5tGPe6+IMqLL1iB6WZqwLhrIEgU7zn/X6xhhfKKN8jJLB4IXOrTnMoYYr5q1Hkkafr+x51ILp8dJbNcgXd3e0gNYI3++J3+In8V54hDAZLKaqmkwWIDcsFE2Fa+iz+DxCV/DbxR8uBKH4EWMcX3A+MuHh+7vN7zBNXMI51YeCUVMnHO0iW6ebksWv0TLJxtsp6K5QdmGhEKhUQfdOhgF6KMThHGn3joRvR636WM=
 
-install:
-  - npm install
+jobs:
+  include:
+    - stage: "Build and Test"
+      name: "Configure any build or test step before the release"
+      script:
+        - echo "Nice Build!"
+        - echo "Testing 1 2 3..."
+        - echo "---"
+        - echo "REMEMBER -> Files are not shared between stages"
 
-script:
-  - echo "default npm test ignored"
+    - stage: "Semantic Release"
+      name: "Generate a new release and changelogs"
+      language: node_js
+      node_js: lts/*
+      os:
+        - linux
+      install:
+        - npm install
+      script: skip
+      deploy:
+        provider: script
+        api_key: "$GITHUB_TOKEN"
+        node_js: lts/*
+        skip_cleanup: true
+        script: npx semantic-release
+        on:
+          branch: master
 
-deploy:
-  provider: script
-  api_key: $GITHUB_TOKEN
-  node_js: lts/*
-  skip_cleanup: true
-  script: npx semantic-release
-  on:
-    branch: master
+    - stage: "Your project Release"
+      name: "Configure your deploy here"
 
-notifications:
-  email:
-    recipients:
-      - rcmoutinho@cyborgdeveloper.tech
-    on_success: change # default: change
-    on_failure: always # default: always
+    # example from the project 'ebook-with-asciidoctor'
+#    - stage: "GitHub Release"
+#      name: "Send the generated files to the new GitHub release"
+#      services:
+#        - docker
+#      env:
+#        - COMPOSE_FILE=docker-compose.yml
+#      script:
+#        - TRAVIS_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+#        - git shortlog -s | cut -f 2- > book/contributors.txt
+#        - docker-compose run --rm ebook $TRAVIS_TAG
+#      deploy:
+#        provider: releases
+#        api_key: "$GITHUB_TOKEN"
+#        file_glob: true
+#        file: book-release/*
+#        skip_cleanup: true
+#        on:
+#          branch: master
+
+# notifications:
+#   email:
+#     recipients:
+#     - my@email.com
+#     on_success: change
+#     on_failure: always
