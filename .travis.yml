@@ -33,9 +33,6 @@ jobs:
         on:
           branch: master
 
-    - stage: "Your project Release"
-      name: "Configure your deploy here"
-
     # example from the project 'ebook-with-asciidoctor'
 #    - stage: "GitHub Release"
 #      name: "Send the generated files to the new GitHub release"
