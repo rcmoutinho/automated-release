@@ -19,5 +19,8 @@ bin
 *.iml
 out
 
+# ignores local travis config folder
+.travis
+
 ### others ###
 .vscode
