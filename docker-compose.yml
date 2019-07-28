@@ -6,5 +6,6 @@ services:
       context: .
       dockerfile: ./docker/travis/Dockerfile
     volumes:
-      - .:/project
+      - .:/app
+      - ./.travis:/root/.travis
     network_mode: bridge
