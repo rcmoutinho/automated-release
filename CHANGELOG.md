@@ -1,3 +1,17 @@
+# [1.7.0](https://github.com/rcmoutinho/automated-release/compare/v1.6.0...v1.7.0) (2019-07-28)
+
+
+### Bug Fixes
+
+* **core:** 🐛 improve travis and github initial config ([2df701f](https://github.com/rcmoutinho/automated-release/commit/2df701f))
+* 🐛 remove invalid travis config ([a35bde8](https://github.com/rcmoutinho/automated-release/commit/a35bde8))
+
+
+### Features
+
+* 🎸 enable changelog emojis ([2c9a677](https://github.com/rcmoutinho/automated-release/commit/2c9a677))
+* 🎸 improve travis configuration to a stage deployment ([f7239b9](https://github.com/rcmoutinho/automated-release/commit/f7239b9))
+
 # [1.6.0](https://github.com/rcmoutinho/automated-release/compare/v1.5.0...v1.6.0) (2019-07-26)
 
 
